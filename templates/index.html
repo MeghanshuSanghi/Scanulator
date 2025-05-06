@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Red Digit Detector</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f7fa;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      color: #333;
+    }
+    form {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      display: inline-block;
+    }
+    input[type="text"],
+    input[type="file"] {
+      padding: 10px;
+      margin-bottom: 20px;
+      width: 250px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    input[type="submit"] {
+      background: #4CAF50;
+      color: white;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to Scanculator</h1>
+  <form action="/process" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+      <label for="student_name">Student Name:</label>
+      <input type="text" name="student_name" id="student_name" class="form-control" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="image">Upload Image:</label>
+      <input type="file" name="image" id="image" class="form-control" accept="image/*" required>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Process</button>
+  </form>
+  
+</body>
+</html>
